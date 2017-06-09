@@ -1810,6 +1810,10 @@ dom-converter@~0.1:
   dependencies:
     utila "~0.3"
 
+dom-scroll-into-view@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dom-scroll-into-view/-/dom-scroll-into-view-1.0.1.tgz#32abb92f0d8feca6215162aef43e4b449ab8d99c"
+
 dom-serializer@0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.1.0.tgz#073c697546ce0780ce23be4a28e293e40bc30c82"
@@ -4694,7 +4698,7 @@ promise@7.1.1, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.7, prop-types@^15.5.8, prop-types@~15.5.7:
+prop-types@^15.5.10, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@~15.5.7:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -4804,6 +4808,13 @@ react-addons-transition-group@^15.5.2:
   dependencies:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
+
+react-autocomplete@^1.5.6:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/react-autocomplete/-/react-autocomplete-1.5.6.tgz#b26a1cb5fdbad3ced3687e99cc5c1346449f1c47"
+  dependencies:
+    dom-scroll-into-view "1.0.1"
+    prop-types "^15.5.10"
 
 react-dev-utils@^3.0.0:
   version "3.0.0"
