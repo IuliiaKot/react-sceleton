@@ -12,7 +12,6 @@ class BusStation extends Component {
                     <CardBlock>
                     <CardTitle>Special Title Treatment</CardTitle>
                     <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    <Button>Go somewhere</Button>
                     </CardBlock>
                     <CardFooter>Footer</CardFooter>
                 </Card>

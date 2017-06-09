@@ -5,7 +5,11 @@ import BusStation from './BusStation';
 class BusLists extends Component {
     render(){
         return (
-            <BusStation />    
+            <div>
+                <BusStation /> <br/>
+                <BusStation /> <br/>
+                <BusStation /> 
+            </div>   
         )
     }
 }
