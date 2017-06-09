@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import { InputGroup, InputGroupButton, Input, Row, Col } from 'reactstrap';
+import { InputGroup, InputGroupButton, Input, Row, Col} from 'reactstrap';
 import axios from 'axios';
 import myData from './allstations.json';
-
+import Autocomplete from 'react-autocomplete';
 
 class Search extends Component {
 
@@ -24,7 +24,20 @@ class Search extends Component {
     render() {
         return (
           <div>
-            <InputGroup>
+            <Autocomplete
+                getItemValue={(item) => item.label}
+                items={this.state.stations.map(elm => {
+                  return {label: elm.address}
+                })}
+                renderItem={(item, isHighlighted) =>
+                  <div style={{ background: isHighlighted ? 'lightgray' : 'white' }}>
+                    {item.label}
+                  </div>
+                }
+                onChange={(e) => value = e.target.value}
+              />
+              <br/>
+            {/*<InputGroup>
               <Input />
               <select>
                 <input/>
@@ -34,7 +47,7 @@ class Search extends Component {
                   })
                 }
               </select>
-            </InputGroup>
+            </InputGroup>*/}
             <br/>
           </div>
            
@@ -43,3 +56,7 @@ class Search extends Component {
 }
 
 export default Search;
+
+  // value={value}
+  //               onChange={(e) => value = e.target.value}
+  //               onSelect={(val) => value = val}

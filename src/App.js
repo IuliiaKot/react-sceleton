@@ -9,10 +9,9 @@ class App extends Component {
   render() {
     return (
       <div className="center_div">
-        <button type="button" class="btn btn-primary">Primary</button>
           <Search />
-          <BusLists />
-           <Button color="danger">Danger!</Button>
+          {/*<BusLists />*/}
+           {/*<Button color="danger">Danger!</Button>*/}
       </div>
     );
   }
