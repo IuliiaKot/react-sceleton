@@ -8,10 +8,11 @@ class BusStation extends Component {
         <Row>
             <Col sm="12">
                <Card>
-                    <CardHeader>Header</CardHeader>
+                    <CardHeader><strong>KT-INGLESIDE/THIRD STREET(OUTBOUND TO BALBOA PARK STATION)</strong><br/>
+Embarcadero Folsom St</CardHeader>
                     <CardBlock>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <CardTitle>The next bus are in:</CardTitle>
+                    <CardText>12 min 42 min 72 min</CardText>
                     </CardBlock>
                     <CardFooter>Footer</CardFooter>
                 </Card>

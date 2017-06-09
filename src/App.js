@@ -8,7 +8,7 @@ import { Button } from 'reactstrap';
 class App extends Component {
   render() {
     return (
-      <div className=" ">
+      <div className="center_div">
         <button type="button" class="btn btn-primary">Primary</button>
           <Search />
           <BusLists />
