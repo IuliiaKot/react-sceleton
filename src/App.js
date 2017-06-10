@@ -8,10 +8,10 @@ import { Button } from 'reactstrap';
 class App extends Component {
   render() {
     return (
-      <div className="  ">
+      <div className="center_div">
           <Search />
-          <BusLists />
-           <Button color="danger">Danger!</Button>
+          <BusLists/>
+           {/*<Button color="danger">Danger!</Button>*/}
       </div>
     );
   }
