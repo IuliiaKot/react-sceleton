@@ -8,8 +8,7 @@ import { Button } from 'reactstrap';
 class App extends Component {
   render() {
     return (
-      <div className=" ">
-        <button type="button" class="btn btn-primary">Primary</button>
+      <div className="  ">
           <Search />
           <BusLists />
            <Button color="danger">Danger!</Button>
