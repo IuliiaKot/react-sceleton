@@ -1,7 +1,25 @@
 import React, {Component} from 'react';
-import { InputGroup, InputGroupButton, Input, Button } from 'reactstrap';
+import { InputGroup, InputGroupButton, Input, Row, Col } from 'reactstrap';
+import axios from 'axios';
+import myData from './allstations.json';
 
 class Search extends Component {
+
+  constructor(){
+    super()
+    this.state = {
+      stations: []
+    }
+  }
+
+  componentDidMount(){
+    let allStations = myData.root.stations.station;
+    this.setState({
+      stations: allStations
+    })
+
+  }
+
     render() {
         return (
             <div>
@@ -20,8 +38,7 @@ class Search extends Component {
                     <Input placeholder="and..." />
                     <InputGroupButton><Button color="secondary">I'm a button</Button></InputGroupButton>
                 </InputGroup>
-                </div>
-           
+                </div>           
         )
     }
 }
