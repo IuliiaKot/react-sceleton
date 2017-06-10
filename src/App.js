@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="center_div">
           <Search />
-          {/*<BusLists />*/}
+          <BusLists/>
            {/*<Button color="danger">Danger!</Button>*/}
       </div>
     );
