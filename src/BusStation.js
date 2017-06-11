@@ -4,15 +4,20 @@ import { Card, Button, CardTitle, CardText, Row, Col, CardHeader, CardFooter, Ca
 
 class BusStation extends Component {
     render() {
+        let station = this.props.info
+        debugger
         return (
         <Row>
             <Col sm="12">
                <Card>
-                    <CardHeader><strong>KT-INGLESIDE/THIRD STREET(OUTBOUND TO BALBOA PARK STATION)</strong><br/>
-Embarcadero Folsom St</CardHeader>
+                    <CardHeader><strong>{station.destination}</strong><br/></CardHeader>
                     <CardBlock>
                     <CardTitle>The next bus are in:</CardTitle>
-                    <CardText>12 min 42 min 72 min</CardText>
+                    {
+                        station.estimate.map(time => {
+                            return <CardText><p style={{backgroundColor: time.hexcolor[0], width: '10px', height:'10px'}}></p>{time.minutes[0]}({time.length[0]} car)</CardText>
+                        })
+                    }
                     </CardBlock>
                     <CardFooter>Footer</CardFooter>
                 </Card>

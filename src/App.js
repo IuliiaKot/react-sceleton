@@ -13,6 +13,7 @@ class App extends Component {
       allStations: [],
       stationInfo: []
     }
+    this.updateStation = this.updateStation.bind(this)
   }
 
   componentDidMount(){
@@ -25,6 +26,7 @@ class App extends Component {
   }
 
   updateStation(data){
+    // debugger
     this.setState({
       stationInfo: data.root.station[0].etd
     })

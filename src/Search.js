@@ -19,8 +19,8 @@ class Search extends Component {
         this.setState({
             value: (val ? val.value : "")
         })
-
-        axios.get('https://api.bart.gov/api/etd.aspx?cmd=etd&orig=19TH&key=MW9S-E7SL-26DU-VV8V')
+        let url = `https://api.bart.gov/api/etd.aspx?cmd=etd&orig=${val.value}&key=MW9S-E7SL-26DU-VV8V`
+        axios.get(url)
             .then(res => {
                 parseString(res.data, (err, result)  => {
                     this.props.handleUpdate(result)

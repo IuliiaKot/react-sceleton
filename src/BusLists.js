@@ -4,11 +4,14 @@ import BusStation from './BusStation';
 
 class BusLists extends Component {
     render(){
+        let allTrains = this.props.stationInfo
         return (
             <div>
-                <BusStation /> <br/>
-                <BusStation /> <br/>
-                <BusStation /> 
+                {
+                    allTrains.map(station => {
+                        return <BusStation info={station}/> 
+                    })
+                }
             </div>   
         )
     }
