@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { InputGroup, InputGroupButton, Input, Row, Col} from 'reactstrap';
 import axios from 'axios';
 import Select from 'react-select';
 let parseString = require('xml2js').parseString;
@@ -22,7 +21,6 @@ class Search extends Component {
         axios.get(url)
             .then(res => {
                 parseString(res.data, (err, result)  => {
-                    debugger
                     this.props.handleUpdate(result)
                 });
             })
@@ -40,6 +38,7 @@ class Search extends Component {
                     return {value: station.abbr, label: station.name}
                 })}
                 onChange={this.fetchInfoStation}
+                style={{fontSize:'15px'}}
                 />
           </div>           
         )

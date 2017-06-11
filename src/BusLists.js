@@ -10,7 +10,7 @@ class BusLists extends Component {
             <div>
                 {
                     allTrains ? allTrains.map((station, idx) => {
-                        return <BusStation info={station} key={idx}/> 
+                        return <BusStation info={station} key={idx} className="station"/> 
                     }) : (<Warning message="Updates are temporarily unavailable."/>)
                 }
             </div>   

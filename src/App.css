@@ -42,3 +42,13 @@
 .displayList li:first-child {
   font-weight: bolder;
 }
+
+
+.main {
+  margin-top: 45px;
+}
+
+.station {
+  margin-bottom: 20px;
+  /*padding-bottom: 20px;*/
+}

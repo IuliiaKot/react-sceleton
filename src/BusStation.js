@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
-import { Card, Button, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBlock } from 'reactstrap';
+import { Card, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBlock } from 'reactstrap';
 
 
 class BusStation extends Component {
     render() {
-        let station = this.props.info
         debugger
+        let station = this.props.info
         return (
-        <Row>
-            <Col sm="12" md="6">
+        <Row className="station">
+            <Col sm="12">
                <Card>
-                    <CardHeader><strong>{station.destination}</strong><br/></CardHeader>
+                    <CardHeader><strong style={{fontSize: '15px'}}>{station.destination} (Platform {this.props.info.estimate[0].platform[0]})</strong><br/></CardHeader>
                     <CardBlock>
-                    <CardTitle>The next bus are in:</CardTitle>
+                    <CardTitle>The next train are in:</CardTitle>
                         <CardText>
                             <ul className="displayList">
                                 {
@@ -27,7 +27,7 @@ class BusStation extends Component {
                             </ul>
                         </CardText>
                     </CardBlock>
-                    <CardFooter>Footer</CardFooter>
+                    {/*<CardFooter>Footer</CardFooter>*/}
                 </Card>
             </Col>
         </Row>
