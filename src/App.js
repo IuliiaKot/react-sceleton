@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import myData from './allstations.json';
+import {Container, Col, Row} from 'reactstrap'
 
 class App extends Component {
   constructor(){
@@ -33,10 +34,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="center_div">
-          <Search stations={this.state.allStations} handleUpdate={this.updateStation}/>
-          <BusLists stationInfo={this.state.stationInfo}/>
-      </div>
+        <Container>
+          <Row>
+            <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
+              <Search stations={this.state.allStations} handleUpdate={this.updateStation}/>
+              <BusLists stationInfo={this.state.stationInfo}/>
+            </Col>
+          </Row>
+        </Container>
+
     );
   }
 }

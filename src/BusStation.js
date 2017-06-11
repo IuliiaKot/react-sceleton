@@ -8,7 +8,7 @@ class BusStation extends Component {
         debugger
         return (
         <Row>
-            <Col sm="12">
+            <Col sm="12" md="6">
                <Card>
                     <CardHeader><strong>{station.destination}</strong><br/></CardHeader>
                     <CardBlock>
