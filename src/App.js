@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 import myData from './allstations.json';
 import {Container, Col, Row} from 'reactstrap'
+import Geolocation from './Geolocation'
 
 class App extends Component {
   constructor(){
@@ -34,6 +35,7 @@ class App extends Component {
   render() {
     return (
        <div className="main">
+         <Geolocation/>
           <Container>
           <Row>
             <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
