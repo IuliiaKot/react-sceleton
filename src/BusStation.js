@@ -13,11 +13,19 @@ class BusStation extends Component {
                     <CardHeader><strong>{station.destination}</strong><br/></CardHeader>
                     <CardBlock>
                     <CardTitle>The next bus are in:</CardTitle>
-                    {
-                        station.estimate.map(time => {
-                            return <CardText><p style={{backgroundColor: time.hexcolor[0], width: '10px', height:'10px'}}></p>{time.minutes[0]}({time.length[0]} car)</CardText>
-                        })
-                    }
+                        <CardText>
+                            <ul className="displayList">
+                                {
+                                station.estimate.map((time, idx) => {
+                                    return <li key={idx}>
+                                        <span style=
+                                            {{backgroundColor: time.hexcolor[0], width: '15px', height:'10px', border: '1px solid black', color:time.hexcolor[0]}}>xxi</span> 
+                                             {time.minutes[0]} {time.minutes[0]==='Leaving'? '' : 'min'}  ({time.length[0]} car)
+                                    </li>
+                                })
+                            }
+                            </ul>
+                        </CardText>
                     </CardBlock>
                     <CardFooter>Footer</CardFooter>
                 </Card>
@@ -26,6 +34,7 @@ class BusStation extends Component {
         )
     }
 }
+
 
 
 export default BusStation;

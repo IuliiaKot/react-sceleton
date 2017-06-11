@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   updateStation(data){
-    // debugger
     this.setState({
       stationInfo: data.root.station[0].etd
     })

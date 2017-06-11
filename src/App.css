@@ -24,4 +24,21 @@
     width:50%; 
 }
 
+.displayList {
+  display: inline;
+  list-style: none;
+}
 
+.displayList li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 12px;
+}
+
+.displayList li span {
+  margin-right: 5px;
+}
+
+.displayList li:first-child {
+  font-weight: bolder;
+}
